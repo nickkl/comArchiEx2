@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nick/CLionProjects/cacheSim/LRU.h
+
+/home/nick/CLionProjects/cacheSim/cache.cpp
+cache.h
+/home/nick/CLionProjects/cacheSim/cache.h
+memUnit.h
+/home/nick/CLionProjects/cacheSim/memUnit.h
+
+/home/nick/CLionProjects/cacheSim/cache.h
+memUnit.h
+/home/nick/CLionProjects/cacheSim/memUnit.h
+
+/home/nick/CLionProjects/cacheSim/memUnit.h
+vector
+-
+list
+-
+LRU.h
+/home/nick/CLionProjects/cacheSim/LRU.h
+

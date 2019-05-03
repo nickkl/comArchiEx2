@@ -1,0 +1,4 @@
+/snap/clion/69/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc -G "CodeBlocks - Unix Makefiles" /home/nick/CLionProjects/cacheSim
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nick/CLionProjects/cacheSim/cmake-build-debug

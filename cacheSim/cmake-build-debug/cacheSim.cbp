@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cacheSim"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/nick/CLionProjects/cacheSim/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/nick/CLionProjects/cacheSim/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cacheSim">
+				<Option output="/home/nick/CLionProjects/cacheSim/cmake-build-debug/cacheSim" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nick/CLionProjects/cacheSim/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 cacheSim"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cacheSim/fast">
+				<Option output="/home/nick/CLionProjects/cacheSim/cmake-build-debug/cacheSim" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nick/CLionProjects/cacheSim/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 cacheSim/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/nick/CLionProjects/cacheSim/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/nick/CLionProjects/cacheSim/LRU.cpp">
+			<Option target="cacheSim"/>
+		</Unit>
+		<Unit filename="/home/nick/CLionProjects/cacheSim/LRU.h">
+			<Option target="cacheSim"/>
+		</Unit>
+		<Unit filename="/home/nick/CLionProjects/cacheSim/cache.cpp">
+			<Option target="cacheSim"/>
+		</Unit>
+		<Unit filename="/home/nick/CLionProjects/cacheSim/cache.h">
+			<Option target="cacheSim"/>
+		</Unit>
+		<Unit filename="/home/nick/CLionProjects/cacheSim/cacheSim.cpp">
+			<Option target="cacheSim"/>
+		</Unit>
+		<Unit filename="/home/nick/CLionProjects/cacheSim/memUnit.cpp">
+			<Option target="cacheSim"/>
+		</Unit>
+		<Unit filename="/home/nick/CLionProjects/cacheSim/memUnit.h">
+			<Option target="cacheSim"/>
+		</Unit>
+		<Unit filename="/home/nick/CLionProjects/cacheSim/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

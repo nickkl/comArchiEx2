@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/cacheSim.dir/cacheSim.cpp.o CMakeFiles/cacheSim.dir/cache.cpp.o CMakeFiles/cacheSim.dir/memUnit.cpp.o CMakeFiles/cacheSim.dir/LRU.cpp.o  -o cacheSim 
