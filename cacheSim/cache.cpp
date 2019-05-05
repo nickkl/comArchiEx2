@@ -5,6 +5,11 @@
 #include "cache.h"
 #include "memUnit.h"
 
+#define NOWRITEALLOCATE 0
+#define WRITEALLOCATE 1
+#define NOVICTIM 0
+#define VICTIM 1
+
 
 double L1MissRate = 0;
 double L2MissRate = 0;
@@ -50,7 +55,38 @@ void cache::execute(unsigned long int pc, char operation) {
 //            }
 //        }
 //    }
-    if(operation=='w'){
+    if(operation=='w'){ // writing to memory
+        class::LRU lru;
+        if(L1.isTagExist(pc, lru)){
+            L1.updateDirty(lru, true);
+            return;
+        } else{
+            if(this->WrAlloc == NOWRITEALLOCATE){
+                //try to write in L2
+                return;
+            } else{
 
+            }
+        } // tag is not in L1
+    }else{ // reading from memory
+        class::LRU lru;
+        if(L1.isTagExist(pc, lru)){
+            return;
+        } else{
+            if(L2.isTagExist(pc,lru)){
+                //write to L1
+                //update L1 LRU
+                //L2 LRU should be OK
+                return;
+            } else { //trying to read from victim
+                if(this->VicCache == VICTIM){
+
+                } else{
+                    this->accessMem++;
+                    return;
+                }
+            }
+
+        }
     }
 }

@@ -22,10 +22,10 @@ public:
     memUnit(unsigned int size, unsigned int ways, unsigned int cyc, unsigned
     int wr, unsigned int block);
     memUnit() = default;
-    bool isTagExist(unsigned long int pc);
+    bool isTagExist(unsigned long int pc,class::LRU& lru);
     bool isFull();
     class::LRU findFirstEmpty();
-    //bool isTagExist(unsigned long int pc,;
+    void updateDirty(class::LRU lru, bool dirty);
 };
 
 

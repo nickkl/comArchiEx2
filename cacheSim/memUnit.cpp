@@ -86,7 +86,10 @@ bool isTagEqual(std::vector<unsigned> &tag, std::vector<unsigned> &pc){
     return true;
 }
 
-bool memUnit::isTagExist(unsigned long int pc) {
+
+//return true if the tag is exist and is valid
+//updates the LRU
+bool memUnit::isTagExist(unsigned long int pc, class::LRU& lru) {
     this->access++;
     std::vector<unsigned > pcTag(32-this->blockSize, 0);
     pcToTag(pc,pcTag, this->blockSize);
@@ -95,9 +98,11 @@ bool memUnit::isTagExist(unsigned long int pc) {
             if(isTagEqual(this->tags[i][j],pcTag))
                 if(this->valid[i][j]) {
                     class::LRU recent(i,j);
+                    lru = recent;
                     this->LRU.remove(recent);
                     this->LRU.push_back(recent);//if tag exist and valid
                             // return true
+
                     return true;
                 }
                 else                  //if tag exist and invalid return false
@@ -129,4 +134,8 @@ class::LRU memUnit::findFirstEmpty() {
         }
     }
     return lru;
+}
+
+void memUnit::updateDirty(class ::LRU lru, bool dirty) {
+    this->dirty[lru.way][lru.row] = dirty;
 }
