@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/nick/CLionProjects/cacheSim/cmake-build-debug"/>
+				<Option working_dir="/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/nick/CLionProjects/cacheSim/cmake-build-debug"/>
+				<Option working_dir="/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="cacheSim">
-				<Option output="/home/nick/CLionProjects/cacheSim/cmake-build-debug/cacheSim" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nick/CLionProjects/cacheSim/cmake-build-debug"/>
+				<Option output="/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/cacheSim" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 cacheSim"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 cacheSim"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="cacheSim/fast">
-				<Option output="/home/nick/CLionProjects/cacheSim/cmake-build-debug/cacheSim" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nick/CLionProjects/cacheSim/cmake-build-debug"/>
+				<Option output="/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/cacheSim" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,45 +67,45 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 cacheSim/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 cacheSim/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/nick/CLionProjects/cacheSim/cmake-build-debug"/>
+				<Option working_dir="/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nick/CLionProjects/cacheSim/LRU.cpp">
+		<Unit filename="/home/nick/CLionProjects/comArchiEx2/cacheSim/LRU.cpp">
 			<Option target="cacheSim"/>
 		</Unit>
-		<Unit filename="/home/nick/CLionProjects/cacheSim/LRU.h">
+		<Unit filename="/home/nick/CLionProjects/comArchiEx2/cacheSim/LRU.h">
 			<Option target="cacheSim"/>
 		</Unit>
-		<Unit filename="/home/nick/CLionProjects/cacheSim/cache.cpp">
+		<Unit filename="/home/nick/CLionProjects/comArchiEx2/cacheSim/cache.cpp">
 			<Option target="cacheSim"/>
 		</Unit>
-		<Unit filename="/home/nick/CLionProjects/cacheSim/cache.h">
+		<Unit filename="/home/nick/CLionProjects/comArchiEx2/cacheSim/cache.h">
 			<Option target="cacheSim"/>
 		</Unit>
-		<Unit filename="/home/nick/CLionProjects/cacheSim/cacheSim.cpp">
+		<Unit filename="/home/nick/CLionProjects/comArchiEx2/cacheSim/cacheSim.cpp">
 			<Option target="cacheSim"/>
 		</Unit>
-		<Unit filename="/home/nick/CLionProjects/cacheSim/memUnit.cpp">
+		<Unit filename="/home/nick/CLionProjects/comArchiEx2/cacheSim/memUnit.cpp">
 			<Option target="cacheSim"/>
 		</Unit>
-		<Unit filename="/home/nick/CLionProjects/cacheSim/memUnit.h">
+		<Unit filename="/home/nick/CLionProjects/comArchiEx2/cacheSim/memUnit.h">
 			<Option target="cacheSim"/>
 		</Unit>
-		<Unit filename="/home/nick/CLionProjects/cacheSim/CMakeLists.txt">
+		<Unit filename="/home/nick/CLionProjects/comArchiEx2/cacheSim/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

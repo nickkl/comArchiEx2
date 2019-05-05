@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nick/CLionProjects/cacheSim/LRU.cpp" "/home/nick/CLionProjects/cacheSim/cmake-build-debug/CMakeFiles/cacheSim.dir/LRU.cpp.o"
-  "/home/nick/CLionProjects/cacheSim/cache.cpp" "/home/nick/CLionProjects/cacheSim/cmake-build-debug/CMakeFiles/cacheSim.dir/cache.cpp.o"
-  "/home/nick/CLionProjects/cacheSim/cacheSim.cpp" "/home/nick/CLionProjects/cacheSim/cmake-build-debug/CMakeFiles/cacheSim.dir/cacheSim.cpp.o"
-  "/home/nick/CLionProjects/cacheSim/memUnit.cpp" "/home/nick/CLionProjects/cacheSim/cmake-build-debug/CMakeFiles/cacheSim.dir/memUnit.cpp.o"
+  "/home/nick/CLionProjects/comArchiEx2/cacheSim/LRU.cpp" "/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/CMakeFiles/cacheSim.dir/LRU.cpp.o"
+  "/home/nick/CLionProjects/comArchiEx2/cacheSim/cache.cpp" "/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/CMakeFiles/cacheSim.dir/cache.cpp.o"
+  "/home/nick/CLionProjects/comArchiEx2/cacheSim/cacheSim.cpp" "/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/CMakeFiles/cacheSim.dir/cacheSim.cpp.o"
+  "/home/nick/CLionProjects/comArchiEx2/cacheSim/memUnit.cpp" "/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/CMakeFiles/cacheSim.dir/memUnit.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

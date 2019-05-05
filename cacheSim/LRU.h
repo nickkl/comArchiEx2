@@ -7,13 +7,19 @@
 
 
 class LRU {
+public:
     int way = 0;
     int row =0;
-public:
+
     LRU(int way, int row){
         this->way=way;
         this->row=row;
     };
+    LRU() = default;
+    bool operator==(const LRU& lru) const{
+        return (this->row == lru.row)&&(this->way==lru.way);
+    }
+
 };
 
 

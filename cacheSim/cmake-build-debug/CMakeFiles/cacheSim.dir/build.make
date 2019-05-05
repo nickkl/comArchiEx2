@@ -43,10 +43,10 @@ RM = /snap/clion/69/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nick/CLionProjects/cacheSim
+CMAKE_SOURCE_DIR = /home/nick/CLionProjects/comArchiEx2/cacheSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nick/CLionProjects/cacheSim/cmake-build-debug
+CMAKE_BINARY_DIR = /home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cacheSim.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/cacheSim.dir/flags.make
 
 CMakeFiles/cacheSim.dir/cacheSim.cpp.o: CMakeFiles/cacheSim.dir/flags.make
 CMakeFiles/cacheSim.dir/cacheSim.cpp.o: ../cacheSim.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nick/CLionProjects/cacheSim/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cacheSim.dir/cacheSim.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cacheSim.dir/cacheSim.cpp.o -c /home/nick/CLionProjects/cacheSim/cacheSim.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cacheSim.dir/cacheSim.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cacheSim.dir/cacheSim.cpp.o -c /home/nick/CLionProjects/comArchiEx2/cacheSim/cacheSim.cpp
 
 CMakeFiles/cacheSim.dir/cacheSim.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cacheSim.dir/cacheSim.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nick/CLionProjects/cacheSim/cacheSim.cpp > CMakeFiles/cacheSim.dir/cacheSim.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nick/CLionProjects/comArchiEx2/cacheSim/cacheSim.cpp > CMakeFiles/cacheSim.dir/cacheSim.cpp.i
 
 CMakeFiles/cacheSim.dir/cacheSim.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cacheSim.dir/cacheSim.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nick/CLionProjects/cacheSim/cacheSim.cpp -o CMakeFiles/cacheSim.dir/cacheSim.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nick/CLionProjects/comArchiEx2/cacheSim/cacheSim.cpp -o CMakeFiles/cacheSim.dir/cacheSim.cpp.s
 
 CMakeFiles/cacheSim.dir/cache.cpp.o: CMakeFiles/cacheSim.dir/flags.make
 CMakeFiles/cacheSim.dir/cache.cpp.o: ../cache.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nick/CLionProjects/cacheSim/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cacheSim.dir/cache.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cacheSim.dir/cache.cpp.o -c /home/nick/CLionProjects/cacheSim/cache.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cacheSim.dir/cache.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cacheSim.dir/cache.cpp.o -c /home/nick/CLionProjects/comArchiEx2/cacheSim/cache.cpp
 
 CMakeFiles/cacheSim.dir/cache.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cacheSim.dir/cache.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nick/CLionProjects/cacheSim/cache.cpp > CMakeFiles/cacheSim.dir/cache.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nick/CLionProjects/comArchiEx2/cacheSim/cache.cpp > CMakeFiles/cacheSim.dir/cache.cpp.i
 
 CMakeFiles/cacheSim.dir/cache.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cacheSim.dir/cache.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nick/CLionProjects/cacheSim/cache.cpp -o CMakeFiles/cacheSim.dir/cache.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nick/CLionProjects/comArchiEx2/cacheSim/cache.cpp -o CMakeFiles/cacheSim.dir/cache.cpp.s
 
 CMakeFiles/cacheSim.dir/memUnit.cpp.o: CMakeFiles/cacheSim.dir/flags.make
 CMakeFiles/cacheSim.dir/memUnit.cpp.o: ../memUnit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nick/CLionProjects/cacheSim/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cacheSim.dir/memUnit.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cacheSim.dir/memUnit.cpp.o -c /home/nick/CLionProjects/cacheSim/memUnit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cacheSim.dir/memUnit.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cacheSim.dir/memUnit.cpp.o -c /home/nick/CLionProjects/comArchiEx2/cacheSim/memUnit.cpp
 
 CMakeFiles/cacheSim.dir/memUnit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cacheSim.dir/memUnit.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nick/CLionProjects/cacheSim/memUnit.cpp > CMakeFiles/cacheSim.dir/memUnit.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nick/CLionProjects/comArchiEx2/cacheSim/memUnit.cpp > CMakeFiles/cacheSim.dir/memUnit.cpp.i
 
 CMakeFiles/cacheSim.dir/memUnit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cacheSim.dir/memUnit.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nick/CLionProjects/cacheSim/memUnit.cpp -o CMakeFiles/cacheSim.dir/memUnit.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nick/CLionProjects/comArchiEx2/cacheSim/memUnit.cpp -o CMakeFiles/cacheSim.dir/memUnit.cpp.s
 
 CMakeFiles/cacheSim.dir/LRU.cpp.o: CMakeFiles/cacheSim.dir/flags.make
 CMakeFiles/cacheSim.dir/LRU.cpp.o: ../LRU.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nick/CLionProjects/cacheSim/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cacheSim.dir/LRU.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cacheSim.dir/LRU.cpp.o -c /home/nick/CLionProjects/cacheSim/LRU.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cacheSim.dir/LRU.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cacheSim.dir/LRU.cpp.o -c /home/nick/CLionProjects/comArchiEx2/cacheSim/LRU.cpp
 
 CMakeFiles/cacheSim.dir/LRU.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cacheSim.dir/LRU.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nick/CLionProjects/cacheSim/LRU.cpp > CMakeFiles/cacheSim.dir/LRU.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nick/CLionProjects/comArchiEx2/cacheSim/LRU.cpp > CMakeFiles/cacheSim.dir/LRU.cpp.i
 
 CMakeFiles/cacheSim.dir/LRU.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cacheSim.dir/LRU.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nick/CLionProjects/cacheSim/LRU.cpp -o CMakeFiles/cacheSim.dir/LRU.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nick/CLionProjects/comArchiEx2/cacheSim/LRU.cpp -o CMakeFiles/cacheSim.dir/LRU.cpp.s
 
 # Object files for target cacheSim
 cacheSim_OBJECTS = \
@@ -125,7 +125,7 @@ cacheSim: CMakeFiles/cacheSim.dir/memUnit.cpp.o
 cacheSim: CMakeFiles/cacheSim.dir/LRU.cpp.o
 cacheSim: CMakeFiles/cacheSim.dir/build.make
 cacheSim: CMakeFiles/cacheSim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nick/CLionProjects/cacheSim/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cacheSim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cacheSim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cacheSim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/cacheSim.dir/clean:
 .PHONY : CMakeFiles/cacheSim.dir/clean
 
 CMakeFiles/cacheSim.dir/depend:
-	cd /home/nick/CLionProjects/cacheSim/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nick/CLionProjects/cacheSim /home/nick/CLionProjects/cacheSim /home/nick/CLionProjects/cacheSim/cmake-build-debug /home/nick/CLionProjects/cacheSim/cmake-build-debug /home/nick/CLionProjects/cacheSim/cmake-build-debug/CMakeFiles/cacheSim.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nick/CLionProjects/comArchiEx2/cacheSim /home/nick/CLionProjects/comArchiEx2/cacheSim /home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug /home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug /home/nick/CLionProjects/comArchiEx2/cacheSim/cmake-build-debug/CMakeFiles/cacheSim.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cacheSim.dir/depend
 

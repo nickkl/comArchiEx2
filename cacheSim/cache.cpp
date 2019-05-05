@@ -40,12 +40,17 @@ cache::cache(unsigned int memCyc, unsigned int Bsize, unsigned int L1size,
 
 void cache::execute(unsigned long int pc, char operation) {
     this->numberOfcommands++;
-    if (operation == 'r') {
-        if (L1.isTagExist(pc)) {
-            this->hitL1++;
-            return;
-        } else{
-            if(L2.isTagExist(pc));
-        }
+//    if (operation == 'r') {
+//        if (L1.isTagExist(pc)) {
+//            this->hitL1++;
+//            return;
+//        } else{
+//            if(L2.isTagExist(pc)){
+//
+//            }
+//        }
+//    }
+    if(operation=='w'){
+
     }
 }

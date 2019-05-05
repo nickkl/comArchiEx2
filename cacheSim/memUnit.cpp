@@ -18,12 +18,11 @@ memUnit::memUnit(unsigned int size, unsigned int ways, unsigned int cyc,
     unsigned int realBlock = (int)pow(2, block);
     unsigned int numberOfRowsPerWay = realLSize/(realWays*realBlock);
 
-//    data part
-//    std::vector<unsigned int > row(realBlock, 0);
-//    std::vector<std::vector<unsigned int>> blocks(numberOfRowsPerWay, row);
-//    std::vector<std::vector<std::vector<unsigned int > >> temp_data(realWays,
-//            blocks);
-//    this->data = temp_data;
+    this->realBlock = realBlock;
+    this->realRows = numberOfRowsPerWay;
+    this->realSize = realLSize;
+    this->realWays = realWays;
+
 
     //tags part
     std::vector<unsigned int > tag(32-block,0);
@@ -41,8 +40,13 @@ memUnit::memUnit(unsigned int size, unsigned int ways, unsigned int cyc,
     std::vector<std::vector<bool >> tempValid(realWays, valid);
     this->valid = tempValid;
 
-    this->numberOfRows = numberOfRowsPerWay;
-    this->numberOfWays = realWays;
+    //    data part
+//    std::vector<unsigned int > row(realBlock, 0);
+//    std::vector<std::vector<unsigned int>> blocks(numberOfRowsPerWay, row);
+//    std::vector<std::vector<std::vector<unsigned int > >> temp_data(realWays,
+//            blocks);
+//    this->data = temp_data;
+
 }
 
 
@@ -86,8 +90,8 @@ bool memUnit::isTagExist(unsigned long int pc) {
     this->access++;
     std::vector<unsigned > pcTag(32-this->blockSize, 0);
     pcToTag(pc,pcTag, this->blockSize);
-    for (int i = 0; i < this->numberOfWays; ++i) {
-        for (int j = 0; j < numberOfRows; ++j) {
+    for (int i = 0; i < this->realWays; ++i) {
+        for (int j = 0; j < realRows; ++j) {
             if(isTagEqual(this->tags[i][j],pcTag))
                 if(this->valid[i][j]) {
                     class::LRU recent(i,j);
@@ -101,4 +105,28 @@ bool memUnit::isTagExist(unsigned long int pc) {
         }
     }
     return false; //tag does not exist
+}
+
+bool memUnit::isFull() {
+    for (int i = 0; i < this->realWays; ++i) {
+        for (int j = 0; j < this->realRows; ++j) {
+            if(!this->valid[i][j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+class::LRU memUnit::findFirstEmpty() {
+    class::LRU lru;
+    for (int i = 0; i < this->realWays; ++i) {
+        for (int j = 0; j < this->realRows; ++j) {
+            if(!this->valid[i][j]){
+                lru.way = i;
+                lru.row = j;
+            }
+        }
+    }
+    return lru;
 }
