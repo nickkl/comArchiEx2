@@ -6,6 +6,7 @@
 #define CACHESIM_LRU_H
 
 
+
 class LRU {
 public:
     int way = 0;
@@ -21,6 +22,8 @@ public:
     }
 
 };
+
+
 
 
 #endif //CACHESIM_LRU_H

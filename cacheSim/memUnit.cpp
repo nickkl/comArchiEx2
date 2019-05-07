@@ -39,14 +39,6 @@ memUnit::memUnit(unsigned int size, unsigned int ways, unsigned int cyc,
     std::vector<bool > valid(numberOfRowsPerWay, false);
     std::vector<std::vector<bool >> tempValid(realWays, valid);
     this->valid = tempValid;
-
-    //    data part
-//    std::vector<unsigned int > row(realBlock, 0);
-//    std::vector<std::vector<unsigned int>> blocks(numberOfRowsPerWay, row);
-//    std::vector<std::vector<std::vector<unsigned int > >> temp_data(realWays,
-//            blocks);
-//    this->data = temp_data;
-
 }
 
 
@@ -99,10 +91,9 @@ bool memUnit::isTagExist(unsigned long int pc, class::LRU& lru) {
                 if(this->valid[i][j]) {
                     class::LRU recent(i,j);
                     lru = recent;
-                    this->LRU.remove(recent);
-                    this->LRU.push_back(recent);//if tag exist and valid
-                            // return true
-
+                    this->updateLRU(recent);
+                    //if tag exist and valid
+                    // return true
                     return true;
                 }
                 else                  //if tag exist and invalid return false
@@ -138,4 +129,53 @@ class::LRU memUnit::findFirstEmpty() {
 
 void memUnit::updateDirty(class ::LRU lru, bool dirty) {
     this->dirty[lru.way][lru.row] = dirty;
+}
+
+bool memUnit::isDirty(class ::LRU &lru) {
+    return this->dirty[lru.way][lru.way];
+}
+
+
+void memUnit::updateMemory(unsigned long int pc, class ::LRU &lru) {
+    std::vector<unsigned > tag(32-this->blockSize);
+    pcToTag(pc, tag, this->blockSize);
+    this->tags[lru.way][lru.row] = tag;
+    this->updateLRU(lru);
+
+}
+
+class::LRU memUnit::popLRU() {
+    return this->LRU.front();
+}
+
+std::vector<unsigned int> memUnit::getTag(class::LRU& lru){
+    return this->tags[lru.way][lru.row];
+}
+
+class::LRU memUnit::findTag(std::vector<unsigned int> tag) {
+    class::LRU lru;
+    for (int i = 0; i < this->realWays; ++i) {
+        for (int j = 0; j < this->realRows; ++j) {
+            if(isTagEqual(this->tags[i][j], tag)){
+                lru.way=i;
+                lru.row=j;
+                return lru;
+            }
+        }
+    }
+    return lru;
+
+}
+
+void memUnit::updateLRU(class ::LRU &lru) {
+    this->LRU.remove(lru);
+    this->LRU.push_back(lru);
+}
+
+void memUnit::updateValid(class ::LRU &lru, bool valid) {
+    this->valid[lru.way][lru.row] = valid;
+}
+
+void memUnit::updateTag(std::vector<unsigned int> tag, class ::LRU &lru) {
+    this->tags[lru.way][lru.row] = tag;
 }

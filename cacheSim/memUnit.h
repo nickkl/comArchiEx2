@@ -15,7 +15,7 @@ class memUnit {
     std::vector<std::vector<std::vector<unsigned int > >> tags;
     std::vector<std::vector<bool >> dirty;
     std::vector<std::vector<bool >> valid;
-    std::list<class::LRU> LRU;
+    std::list<class::LRU > LRU;
     unsigned access=0;
     //std::vector<std::vector<std::vector<unsigned int > >> data;
 public:
@@ -26,6 +26,14 @@ public:
     bool isFull();
     class::LRU findFirstEmpty();
     void updateDirty(class::LRU lru, bool dirty);
+    bool isDirty(class::LRU& lru);
+    void updateMemory(unsigned long int pc, class::LRU& lru);
+    class::LRU popLRU();
+    std::vector<unsigned int> getTag(class::LRU& lru);
+    class::LRU findTag(std::vector<unsigned int>);
+    void updateLRU(class::LRU& lru);
+    void updateValid(class::LRU& lru, bool valid);
+    void updateTag(std::vector<unsigned int>, class::LRU &lru);
 };
 
 
