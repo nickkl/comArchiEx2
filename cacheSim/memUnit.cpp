@@ -103,6 +103,28 @@ bool memUnit::isTagExist(unsigned long int pc, class::LRU& lru) {
     return false; //tag does not exist
 }
 
+bool memUnit::isTagExistVictim(unsigned long int pc, class ::LRU &lru)  {
+    this->access++;
+    std::vector<unsigned > pcTag(32-this->blockSize, 0);
+    pcToTag(pc,pcTag, this->blockSize);
+    for (int i = 0; i < this->realWays; ++i) {
+        for (int j = 0; j < realRows; ++j) {
+            if(isTagEqual(this->tags[i][j],pcTag))
+                if(this->valid[i][j]) {
+                    class::LRU recent(i,j);
+                    lru = recent;
+                    //this->updateLRUVictim(recent);
+                    //if tag exist and valid
+                    // return true
+                    return true;
+                }
+                else                  //if tag exist and invalid return false
+                    return false;
+        }
+    }
+    return false; //tag does not exist
+}
+
 bool memUnit::isFull() {
     for (int i = 0; i < this->realWays; ++i) {
         for (int j = 0; j < this->realRows; ++j) {
@@ -144,6 +166,14 @@ void memUnit::updateMemory(unsigned long int pc, class ::LRU &lru) {
 
 }
 
+void memUnit::updateMemoryVictim(unsigned long int pc, class ::LRU &lru) {
+    std::vector<unsigned > tag(32-this->blockSize);
+    pcToTag(pc, tag, this->blockSize);
+    this->tags[lru.way][lru.row] = tag;
+    this->updateLRUVictim(lru);
+
+}
+
 class::LRU memUnit::popLRU() {
     return this->LRU.front();
 }
@@ -178,4 +208,14 @@ void memUnit::updateValid(class ::LRU &lru, bool valid) {
 
 void memUnit::updateTag(std::vector<unsigned int> tag, class ::LRU &lru) {
     this->tags[lru.way][lru.row] = tag;
+}
+
+void memUnit::updateLRUVictim(class::LRU& lru){
+    this->LRU.pop_front();
+    this->LRU.push_back(lru);
+}
+
+void memUnit::updateRow(std::vector<unsigned int> tag, class ::LRU &lru) {
+    this->tags[lru.way][lru.row] = tag;
+    this->LRU.push_back(lru);
 }

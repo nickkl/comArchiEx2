@@ -23,6 +23,7 @@ public:
     int wr, unsigned int block);
     memUnit() = default;
     bool isTagExist(unsigned long int pc,class::LRU& lru);
+    bool isTagExistVictim(unsigned long int pc,class::LRU& lru);
     bool isFull();
     class::LRU findFirstEmpty();
     void updateDirty(class::LRU lru, bool dirty);
@@ -34,6 +35,9 @@ public:
     void updateLRU(class::LRU& lru);
     void updateValid(class::LRU& lru, bool valid);
     void updateTag(std::vector<unsigned int>, class::LRU &lru);
+    void updateLRUVictim(class::LRU& lru);
+    void updateMemoryVictim(unsigned long int pc, class ::LRU &lru);
+    void updateRow (std::vector<unsigned int>, class::LRU& lru);
 };
 
 
