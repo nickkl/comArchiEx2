@@ -219,3 +219,7 @@ void memUnit::updateRow(std::vector<unsigned int> tag, class ::LRU &lru) {
     this->tags[lru.way][lru.row] = tag;
     this->LRU.push_back(lru);
 }
+
+int memUnit::getAcc() {
+    return this->access;
+}

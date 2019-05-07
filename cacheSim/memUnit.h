@@ -38,6 +38,7 @@ public:
     void updateLRUVictim(class::LRU& lru);
     void updateMemoryVictim(unsigned long int pc, class ::LRU &lru);
     void updateRow (std::vector<unsigned int>, class::LRU& lru);
+    int getAcc();
 };
 
 

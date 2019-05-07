@@ -14,6 +14,7 @@
     <list default="true" id="5124e086-b34c-41a5-8045-d2100ae80b2a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cache.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cache.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache.h" beforeDir="false" afterPath="$PROJECT_DIR$/cache.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cacheSim" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cacheSim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memUnit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/memUnit.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memUnit.h" beforeDir="false" afterPath="$PROJECT_DIR$/memUnit.h" afterDir="false" />
@@ -55,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/memUnit.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="219" column="29" selection-start-line="219" selection-start-column="29" selection-end-line="219" selection-end-column="29" />
+            <state relative-caret-position="-9">
+              <caret line="200" column="26" lean-forward="true" selection-start-line="200" selection-start-column="26" selection-end-line="200" selection-end-column="26" />
               <folding>
                 <element signature="e#37#56#0" expanded="true" />
               </folding>
@@ -67,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/memUnit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
-              <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+            <state relative-caret-position="343">
+              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
               <folding>
                 <element signature="e#92#109#0" expanded="true" />
               </folding>
@@ -76,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cache.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
+            <state relative-caret-position="57">
+              <caret line="494" column="5" selection-start-line="494" selection-start-column="5" selection-end-line="494" selection-end-column="5" />
               <folding>
                 <element signature="e#38#56#0" expanded="true" />
               </folding>
@@ -88,11 +89,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cache.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="519">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+              <folding>
+                <element signature="e#89#105#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,11 +112,11 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/cacheSim.cpp" />
-        <option value="$PROJECT_DIR$/cache.h" />
         <option value="$PROJECT_DIR$/LRU.h" />
         <option value="$PROJECT_DIR$/memUnit.h" />
-        <option value="$PROJECT_DIR$/cache.cpp" />
         <option value="$PROJECT_DIR$/memUnit.cpp" />
+        <option value="$PROJECT_DIR$/cache.cpp" />
+        <option value="$PROJECT_DIR$/cache.h" />
       </list>
     </option>
   </component>
@@ -187,7 +191,7 @@
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39934713" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3293348" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3293348" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -219,7 +223,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="isFull+findFirstEmpty" />
     <MESSAGE value="more shit" />
-    <option name="LAST_COMMIT_MESSAGE" value="more shit" />
+    <MESSAGE value="1853" />
+    <MESSAGE value="1900" />
+    <option name="LAST_COMMIT_MESSAGE" value="1900" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp" />
@@ -254,17 +260,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/memUnit.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        <state relative-caret-position="343">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
           <folding>
             <element signature="e#92#109#0" expanded="true" />
           </folding>
@@ -273,8 +272,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/memUnit.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="219" column="29" selection-start-line="219" selection-start-column="29" selection-end-line="219" selection-end-column="29" />
+        <state relative-caret-position="-9">
+          <caret line="200" column="26" lean-forward="true" selection-start-line="200" selection-start-column="26" selection-end-line="200" selection-end-column="26" />
           <folding>
             <element signature="e#37#56#0" expanded="true" />
           </folding>
@@ -283,10 +282,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cache.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
+        <state relative-caret-position="57">
+          <caret line="494" column="5" selection-start-line="494" selection-start-column="5" selection-end-line="494" selection-end-column="5" />
           <folding>
             <element signature="e#38#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="e#89#105#0" expanded="true" />
           </folding>
         </state>
       </provider>
