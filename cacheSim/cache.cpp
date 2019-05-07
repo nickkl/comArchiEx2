@@ -87,7 +87,6 @@ void cache::execute(unsigned long int pc, char operation) {
                 }
             } else { //not in L2
                 if (this->VicCache == VICTIM) { //Victim
-                    class ::LRU lru;
                     if (this->WrAlloc == WRITEALLOCATE) {
                         if (victim.isTagExistVictim(pc, lru)) {
                             victim.updateDirty(lru, true);
@@ -132,9 +131,20 @@ void cache::execute(unsigned long int pc, char operation) {
                                 L1.updateMemory(pc, toFreeL1);
                                 L1.updateDirty(toFreeL1, false);
 
+                                std::vector<unsigned int> tagToClear = L2
+                                        .getTag(toFreeL2);
                                 //update pc to l2
+                                class::LRU vic;
+                                if(victim.isFull()){
+                                    vic = victim.popLRU();
+                                } else{
+                                    vic = victim.findFirstEmpty();
+                                }
+
+                                victim.updateRow(tagToClear,vic);
+
                                 L2.updateMemory(pc, toFreeL2);
-                                L2.updateDirty(toFreeL2, true);
+                                L2.updateDirty(toFreeL2, false);
 
                             }
                         } else {
@@ -155,7 +165,7 @@ void cache::execute(unsigned long int pc, char operation) {
 
                                     //update pc to l2
                                     L2.updateMemory(pc, toFreeL2);
-                                    L2.updateDirty(toFreeL2, true);
+                                    L2.updateDirty(toFreeL2, false);
                                 }
                             } else { //both empty
                                 class ::LRU toFreeL2 = L2.findFirstEmpty();
@@ -259,6 +269,8 @@ void cache::execute(unsigned long int pc, char operation) {
                 }
             }
         }
+    }else { //read
+
     }
 }
 //    }else{ // reading from memory
