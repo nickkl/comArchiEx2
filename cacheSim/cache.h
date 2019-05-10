@@ -30,10 +30,10 @@ public:
     void calc(){
         accessL1 = L1.getAcc();
         accessL2 = L2.getAcc();
+        accessVictim = victim.getAcc();
         this->miss1 = 1 - ((double)hitL1/accessL1);
         this->miss2 = 1 - ((double)hitL2/accessL2);
-        this->avg = double((accessL1*L1Cyc)+(accessL2*L2Cyc)+accessVictim+
-                (accessMem*MemCyc))/numberOfcommands;
+        this->avg = double((accessL1*L1Cyc)+(accessL2*L2Cyc)+accessVictim+(accessMem*MemCyc))/numberOfcommands;
     }
     double getL1(){
         return miss1;

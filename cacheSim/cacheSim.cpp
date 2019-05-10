@@ -32,7 +32,8 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 
-	unsigned int 	MemCyc = 100, BSize =3, L1Size = 4, L2Size = 6,L1Assoc=1,L2Assoc = 0,L1Cyc = 1,L2Cyc = 5,WrAlloc = 1,VicCache = 0;
+	unsigned int 	MemCyc = 100, BSize =2, L1Size = 3, L2Size = 4, L1Assoc=0,
+	L2Assoc = 1,L1Cyc = 1,L2Cyc = 5,WrAlloc = 0,VicCache = 1;
 //	for (int i = 2; i < 21; i += 2) {
 //		string s(argv[i]);
 //		if (s == "--mem-cyc") {

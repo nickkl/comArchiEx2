@@ -31,7 +31,7 @@ cache::cache(unsigned int memCyc, unsigned int Bsize, unsigned int L1size,
     memUnit l2(L2size, L2Assoc, L2Cyc, wrAlloc, Bsize);
     this->L2 = l2;
     if (VicCache == 1) {
-        memUnit vic(4 * Bsize, 1, 1, wrAlloc, Bsize); // maybe wrAlloc should be
+        memUnit vic(4, 0, 1, wrAlloc, Bsize); // maybe wrAlloc should be
         // different
         this->victim = vic;
     }
@@ -83,12 +83,15 @@ void cache::execute(unsigned long int pc, char operation) {
                 }
             } else { //not in L2
                 if (this->VicCache == VICTIM) { //Victim
+                    bool foundInVic;
+                    if (victim.isTagExistVictim(pc, lru)) {
+                        victim.updateLRUVictim(lru);
+                        foundInVic=true;
+                    } else {// tag does not exist
+                        foundInVic=false;
+                        this->accessMem++;
+                    }
                     if (this->WrAlloc == WRITEALLOCATE) {
-                        if (victim.isTagExistVictim(pc, lru)) {
-                            victim.updateDirty(lru, true);
-                        } else {// tag does not exist
-                            this->accessMem++;
-                        }
                         if (L2.isFull()) {
                             if (L1.isFull()) {//L1+L2 is full
                                 class ::LRU toFreeL2 = L2.popLRU();
@@ -100,25 +103,25 @@ void cache::execute(unsigned long int pc, char operation) {
                                     class ::LRU tag = L2.findTag(tagToClear);
                                     L2.updateDirty(tag, true);
                                     L2.updateLRU(tag);
-
+                                }
                                     //update pc to l1
                                     L1.updateMemory(pc, toFreeL1);
                                     L1.updateDirty(toFreeL1, false);
 
-                                    //update pc to l2
-                                    tagToClear = L2.getTag(toFreeL2);
-                                    class::LRU vic;
-                                    if(victim.isFull()){
-                                        vic = victim.popLRU();
-                                    } else{
-                                        vic = victim.findFirstEmpty();
+                                    if(!foundInVic) {
+                                        std::vector<unsigned int> tagToClear = L2.getTag(
+                                                toFreeL2);
+                                        class ::LRU vic;
+                                        if (victim.isFull()) {
+                                            vic = victim.popLRU();
+                                        } else {
+                                            vic = victim.findFirstEmpty();
+                                        }
+                                        victim.updateRow(tagToClear, vic);
                                     }
-
-                                    victim.updateRow(tagToClear,vic);
 
                                     L2.updateMemory(pc, toFreeL2);
                                     L2.updateDirty(toFreeL2, false);
-                                }
                             } else { //only L2 is full
                                 class ::LRU toFreeL2 = L2.popLRU();
                                 class ::LRU toFreeL1 = L1.findFirstEmpty();
@@ -178,16 +181,11 @@ void cache::execute(unsigned long int pc, char operation) {
                             }
 
                         }
-                    } else { // No writeAllocate
-                        if (victim.isTagExistVictim(pc, lru)) {
-                            victim.updateDirty(lru, true);
+                    } else {
                             return;
-                        } else {// tag does not exist
-                            this->accessMem++;
-                            return;
-                        }
                     }
                 } else { // no Victim = memory access
+                    this->accessMem++;
                     if (this->WrAlloc == WRITEALLOCATE) {
                         //bring from memory to L2
                         if (L2.isFull()) {
@@ -259,7 +257,6 @@ void cache::execute(unsigned long int pc, char operation) {
 
                         }
                     } else { // no Write allocate
-                        this->accessMem++;
                         return;
                     }
                 }
@@ -306,12 +303,15 @@ void cache::execute(unsigned long int pc, char operation) {
                 }
             } else { //not in L2
                 if (this->VicCache == VICTIM) { //Victim
+                    bool foundInVic;
+                    if (victim.isTagExistVictim(pc, lru)) {
+                        victim.updateLRUVictim(lru);
+                        foundInVic=true;
+                    } else {// tag does not exist
+                        foundInVic=false;
+                        this->accessMem++;
+                    }
                     if (this->WrAlloc == WRITEALLOCATE) {
-                        if (victim.isTagExistVictim(pc, lru)) {
-                            victim.updateLRUVictim(lru);
-                        } else {// tag does not exist
-                            this->accessMem++;
-                        }
                         if (L2.isFull()) {
                             if (L1.isFull()) {//L1+L2 is full
                                 class ::LRU toFreeL2 = L2.popLRU();
@@ -323,25 +323,29 @@ void cache::execute(unsigned long int pc, char operation) {
                                     class ::LRU tag = L2.findTag(tagToClear);
                                     L2.updateDirty(tag, true);
                                     L2.updateLRU(tag);
+                                }
 
                                     //update pc to l1
                                     L1.updateMemory(pc, toFreeL1);
                                     L1.updateDirty(toFreeL1, false);
 
                                     //update pc to l2
-                                    tagToClear = L2.getTag(toFreeL2);
-                                    class::LRU vic;
-                                    if(victim.isFull()){
-                                        vic = victim.popLRU();
-                                    } else{
-                                        vic = victim.findFirstEmpty();
-                                    }
 
-                                    victim.updateRow(tagToClear,vic);
+                                    if(!foundInVic) {
+                                        std::vector<unsigned int> tagToClear = L2.getTag(
+                                                toFreeL2);
+                                        class ::LRU vic;
+                                        if (victim.isFull()) {
+                                            vic = victim.popLRU();
+                                        } else {
+                                            vic = victim.findFirstEmpty();
+                                        }
+                                        victim.updateRow(tagToClear, vic);
+                                    }
 
                                     L2.updateMemory(pc, toFreeL2);
                                     L2.updateDirty(toFreeL2, false);
-                                }
+
                             } else { //only L2 is full
                                 class ::LRU toFreeL2 = L2.popLRU();
                                 class ::LRU toFreeL1 = L1.findFirstEmpty();
@@ -401,15 +405,10 @@ void cache::execute(unsigned long int pc, char operation) {
 
                         }
                     } else { // No writeAllocate
-                        if (victim.isTagExistVictim(pc, lru)) {
-                            victim.updateLRUVictim(lru);
-                            return;
-                        } else {// tag does not exist
-                            this->accessMem++;
                             return;
                         }
-                    }
                 } else { // no Victim = memory access
+                    this->accessMem++;
                     if (this->WrAlloc == WRITEALLOCATE) {
                         //bring from memory to L2
                         if (L2.isFull()) {
@@ -478,10 +477,8 @@ void cache::execute(unsigned long int pc, char operation) {
                                 L2.updateDirty(toFreeL2, true);
 
                             }
-                            this->accessMem++;
                         }
                     } else { // no Write allocate
-                        this->accessMem++;
                         return;
                     }
                 }
