@@ -15,14 +15,14 @@ using std::stringstream;
 
 
 int main(int argc, char *argv[]) {
-
-	if (argc < 21) {
-		cerr << "Not enough arguments" << endl;
-		return 0;
-	}
-
-	// File
-	// Assuming it is the first argument
+//
+//	if (argc < 21) {
+//		cerr << "Not enough arguments" << endl;
+//		return 0;
+//	}
+//
+//	// File
+//	// Assuming it is the first argument
 	char * fileString = argv[1];
 	ifstream file(fileString); //input file stream
 	string line;
@@ -32,35 +32,34 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 
-	unsigned int 	MemCyc = 0, BSize = 0, L1Size = 0, L2Size = 0,L1Assoc = 0,L2Assoc = 0,
-					L1Cyc = 0,L2Cyc = 0,WrAlloc = 0,VicCache = 0;
-	for (int i = 2; i < 21; i += 2) {
-		string s(argv[i]);
-		if (s == "--mem-cyc") {
-			MemCyc = atoi(argv[i + 1]);
-		} else if (s == "--bsize") {
-			BSize = atoi(argv[i + 1]);
-		} else if (s == "--l1-size") {
-			L1Size = atoi(argv[i + 1]);
-		} else if (s == "--l2-size") {
-			L2Size = atoi(argv[i + 1]);
-		} else if (s == "--l1-cyc") {
-			L1Cyc = atoi(argv[i + 1]);
-		} else if (s == "--l2-cyc") {
-			L2Cyc = atoi(argv[i + 1]);
-		} else if (s == "--l1-assoc") {
-			L1Assoc = atoi(argv[i + 1]);
-		} else if (s == "--l2-assoc") {
-			L2Assoc = atoi(argv[i + 1]);
-		} else if (s == "--wr-alloc") {
-			WrAlloc = atoi(argv[i + 1]);
-		} else if (s == "--vic-cache") {
-			VicCache = atoi(argv[i + 1]);
-		} else {
-			cerr << "Error in arguments" << endl;
-			return 0;
-		}
-	}
+	unsigned int 	MemCyc = 100, BSize =3, L1Size = 4, L2Size = 6,L1Assoc=1,L2Assoc = 0,L1Cyc = 1,L2Cyc = 5,WrAlloc = 1,VicCache = 0;
+//	for (int i = 2; i < 21; i += 2) {
+//		string s(argv[i]);
+//		if (s == "--mem-cyc") {
+//			MemCyc = atoi(argv[i + 1]);
+//		} else if (s == "--bsize") {
+//			BSize = atoi(argv[i + 1]);
+//		} else if (s == "--l1-size") {
+//			L1Size = atoi(argv[i + 1]);
+//		} else if (s == "--l2-size") {
+//			L2Size = atoi(argv[i + 1]);
+//		} else if (s == "--l1-cyc") {
+//			L1Cyc = atoi(argv[i + 1]);
+//		} else if (s == "--l2-cyc") {
+//			L2Cyc = atoi(argv[i + 1]);
+//		} else if (s == "--l1-assoc") {
+//			L1Assoc = atoi(argv[i + 1]);
+//		} else if (s == "--l2-assoc") {
+//			L2Assoc = atoi(argv[i + 1]);
+//		} else if (s == "--wr-alloc") {
+//			WrAlloc = atoi(argv[i + 1]);
+//		} else if (s == "--vic-cache") {
+//			VicCache = atoi(argv[i + 1]);
+//		} else {
+//			cerr << "Error in arguments" << endl;
+//			return 0;
+//		}
+//	}
 
     cache sim(MemCyc , BSize, L1Size, L2Size, L1Assoc ,L2Assoc, L1Cyc, L2Cyc,
               WrAlloc, VicCache);
@@ -86,11 +85,16 @@ int main(int argc, char *argv[]) {
 
 		unsigned long int num = 0;
 		num = strtoul(cutAddress.c_str(), NULL, 16);
+		sim.execute(num,operation);
 
 		// DEBUG - remove this line
 		cout << " (dec) " << num << endl;
 	}
 
+	sim.calc();
+	double L1MissRate = sim.getL1();
+	double L2MissRate = sim.getL2();
+    double avgAccTime = sim.getAvg();
 
 	printf("L1miss=%.03f ", L1MissRate);
 	printf("L2miss=%.03f ", L2MissRate);

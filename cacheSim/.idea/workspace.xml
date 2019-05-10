@@ -15,9 +15,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cache.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cache.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cache.h" beforeDir="false" afterPath="$PROJECT_DIR$/cache.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cacheSim" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cacheSim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cacheSim" beforeDir="false" afterPath="$PROJECT_DIR$/cacheSim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cacheSim.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cacheSim.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example1_command" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example2_command" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example2_trace" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example3_command" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example3_trace" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/memUnit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/memUnit.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memUnit.h" beforeDir="false" afterPath="$PROJECT_DIR$/memUnit.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cacheSim.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1914">
-              <caret line="87" column="52" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
+            <state relative-caret-position="232">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -45,19 +51,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LRU.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/memUnit.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="200" column="26" lean-forward="true" selection-start-line="200" selection-start-column="26" selection-end-line="200" selection-end-column="26" />
+            <state relative-caret-position="166">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#37#56#0" expanded="true" />
               </folding>
@@ -68,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/memUnit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+            <state relative-caret-position="244">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#92#109#0" expanded="true" />
               </folding>
@@ -77,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cache.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="494" column="5" selection-start-line="494" selection-start-column="5" selection-end-line="494" selection-end-column="5" />
+            <state relative-caret-position="533">
+              <caret line="433" column="33" selection-start-line="433" selection-start-column="33" selection-end-line="433" selection-end-column="33" />
               <folding>
                 <element signature="e#38#56#0" expanded="true" />
               </folding>
@@ -89,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cache.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="396">
+              <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
               <folding>
                 <element signature="e#89#105#0" expanded="true" />
               </folding>
@@ -103,6 +100,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>hitL2</find>
+      <find>L2.isTagExist(pc, lru)</find>
+      <find>L1.isTagExist(pc, lru)</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -111,19 +115,19 @@
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/cacheSim.cpp" />
         <option value="$PROJECT_DIR$/LRU.h" />
         <option value="$PROJECT_DIR$/memUnit.h" />
+        <option value="$PROJECT_DIR$/cache.h" />
+        <option value="$PROJECT_DIR$/cacheSim.cpp" />
         <option value="$PROJECT_DIR$/memUnit.cpp" />
         <option value="$PROJECT_DIR$/cache.cpp" />
-        <option value="$PROJECT_DIR$/cache.h" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="57" />
     <option name="y" value="27" />
-    <option name="width" value="932" />
+    <option name="width" value="1171" />
     <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -165,7 +169,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="cacheSim" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="example1_command" WORKING_DIR="file://$PROJECT_DIR$/examples" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cacheSim" TARGET_NAME="cacheSim" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cacheSim" RUN_TARGET_NAME="cacheSim">
+    <configuration name="cacheSim" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="example1_trace" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cacheSim" TARGET_NAME="cacheSim" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cacheSim" RUN_TARGET_NAME="cacheSim">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -183,15 +187,15 @@
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="CMake" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.3293348" />
+      <window_info anchor="bottom" id="CMake" order="3" weight="0.3293348" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.3297062" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.39934713" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.45801526" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.12868048" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3293348" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3293348" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -225,7 +229,19 @@
     <MESSAGE value="more shit" />
     <MESSAGE value="1853" />
     <MESSAGE value="1900" />
-    <option name="LAST_COMMIT_MESSAGE" value="1900" />
+    <MESSAGE value="finished writing" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished writing" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/cacheSim.cpp</url>
+          <line>87</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp" />
@@ -243,16 +259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cacheSim.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1914">
-          <caret line="87" column="52" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LRU.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -260,10 +266,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cache.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="e#89#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/8/ext/new_allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/8/bits/allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/8/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="394" selection-start-line="394" selection-end-line="394" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/8/ext/alloc_traits.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/8/bits/vector.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="221" selection-start-line="221" selection-end-line="221" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/memUnit.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        <state relative-caret-position="244">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#92#109#0" expanded="true" />
           </folding>
@@ -272,30 +323,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/memUnit.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="200" column="26" lean-forward="true" selection-start-line="200" selection-start-column="26" selection-end-line="200" selection-end-column="26" />
+        <state relative-caret-position="166">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#37#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache.cpp">
+    <entry file="file://$PROJECT_DIR$/cacheSim.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="494" column="5" selection-start-line="494" selection-start-column="5" selection-end-line="494" selection-end-column="5" />
+        <state relative-caret-position="232">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
-            <element signature="e#38#56#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache.h">
+    <entry file="file://$PROJECT_DIR$/cache.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="533">
+          <caret line="433" column="33" selection-start-line="433" selection-start-column="33" selection-end-line="433" selection-end-column="33" />
           <folding>
-            <element signature="e#89#105#0" expanded="true" />
+            <element signature="e#38#56#0" expanded="true" />
           </folding>
         </state>
       </provider>

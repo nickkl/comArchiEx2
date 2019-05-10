@@ -32,12 +32,12 @@ memUnit::memUnit(unsigned int size, unsigned int ways, unsigned int cyc,
     this->tags = temp_tag;
 
     //dirty
-    std::vector<bool > dirty(numberOfRowsPerWay, false);
-    std::vector<std::vector<bool >> tempDirty(realWays, dirty);
+    std::vector<bool > dirty1(numberOfRowsPerWay, false);
+    std::vector<std::vector<bool >> tempDirty(realWays, dirty1);
     this->dirty = tempDirty;
 
-    std::vector<bool > valid(numberOfRowsPerWay, false);
-    std::vector<std::vector<bool >> tempValid(realWays, valid);
+    std::vector<bool > valid1(numberOfRowsPerWay, false);
+    std::vector<std::vector<bool >> tempValid(realWays, valid1);
     this->valid = tempValid;
 }
 
@@ -143,6 +143,8 @@ class::LRU memUnit::findFirstEmpty() {
             if(!this->valid[i][j]){
                 lru.way = i;
                 lru.row = j;
+                this->valid[i][j] = true;
+                return lru;
             }
         }
     }

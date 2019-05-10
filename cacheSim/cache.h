@@ -8,11 +8,6 @@
 #include <cmath>
 #include "memUnit.h"
 
-extern double L1MissRate;
-extern double L2MissRate;
-extern double avgAccTime;
-
-
 class cache {
     unsigned int MemCyc = 0, BSize = 0, L1Size = 0, L2Size = 0, L1Assoc = 0, L2Assoc = 0, L1Cyc = 0, L2Cyc = 0, WrAlloc = 0, VicCache = 0;
     memUnit L1;
@@ -33,9 +28,21 @@ public:
 
     void execute(unsigned long int pc, char operation);
     void calc(){
+        accessL1 = L1.getAcc();
+        accessL2 = L2.getAcc();
         this->miss1 = 1 - ((double)hitL1/accessL1);
         this->miss2 = 1 - ((double)hitL2/accessL2);
-        this->avg = double((accessL1*L1Cyc)+(accessL2*L2Cyc)+accessVictim)/numberOfcommands;
+        this->avg = double((accessL1*L1Cyc)+(accessL2*L2Cyc)+accessVictim+
+                (accessMem*MemCyc))/numberOfcommands;
+    }
+    double getL1(){
+        return miss1;
+    }
+    double getL2(){
+        return miss2;
+    }
+    double getAvg(){
+        return avg;
     }
 };
 

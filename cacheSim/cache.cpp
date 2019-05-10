@@ -10,12 +10,6 @@
 #define NOVICTIM 0
 #define VICTIM 1
 
-
-double L1MissRate = 0;
-double L2MissRate = 0;
-double avgAccTime = 0;
-
-
 cache::cache(unsigned int memCyc, unsigned int Bsize, unsigned int L1size,
              unsigned int L2size, unsigned int L1Assoc, unsigned int L2Assoc,
              unsigned int L1Cyc, unsigned int L2Cyc, unsigned int wrAlloc,
@@ -274,9 +268,11 @@ void cache::execute(unsigned long int pc, char operation) {
     }else { //read
         class ::LRU lru;
         if (L1.isTagExist(pc, lru)) {
+            hitL1++;
             return;
         } else {// tag is not in L1
             if (L2.isTagExist(pc, lru)) {
+                this->hitL2++;
                 if (this->WrAlloc == WRITEALLOCATE) {
                     if (L1.isFull()) {// no free space
                         class ::LRU toFree = L1.popLRU();
@@ -381,7 +377,7 @@ void cache::execute(unsigned long int pc, char operation) {
                                     class ::LRU tag = L2.findTag(tagToClear);
                                     L2.updateDirty(tag, true);
                                     L2.updateLRU(tag);
-
+                                }
                                     //update pc to l1
                                     L1.updateMemory(pc, toFreeL1);
                                     L1.updateDirty(toFreeL1, false);
@@ -389,7 +385,6 @@ void cache::execute(unsigned long int pc, char operation) {
                                     //update pc to l2
                                     L2.updateMemory(pc, toFreeL2);
                                     L2.updateDirty(toFreeL2, false);
-                                }
                             } else { //both empty
                                 class ::LRU toFreeL2 = L2.findFirstEmpty();
                                 class ::LRU toFreeL1 = L1.findFirstEmpty();
@@ -461,6 +456,7 @@ void cache::execute(unsigned long int pc, char operation) {
                                     class ::LRU tag = L2.findTag(tagToClear);
                                     L2.updateDirty(tag, true);
                                     L2.updateLRU(tag);
+                                }
 
                                     //update pc to l1
                                     L1.updateMemory(pc, toFreeL1);
@@ -469,7 +465,6 @@ void cache::execute(unsigned long int pc, char operation) {
                                     //update pc to l2
                                     L2.updateMemory(pc, toFreeL2);
                                     L2.updateDirty(toFreeL2, true);
-                                }
                             } else { //both empty
                                 class ::LRU toFreeL2 = L2.findFirstEmpty();
                                 class ::LRU toFreeL1 = L1.findFirstEmpty();
@@ -494,35 +489,3 @@ void cache::execute(unsigned long int pc, char operation) {
         }
     }
 }
-//    }else{ // reading from memory
-//        class::LRU lru;
-//        if(L1.isTagExist(pc, lru)){
-//            return;
-//        } else{
-//            if(L2.isTagExist(pc,lru)){
-//                //write to L1
-//                //update L1 LRU
-//                //L2 LRU should be OK
-//                return;
-//            } else { //trying to read from victim
-//                if(this->VicCache == VICTIM){
-//
-//                } else{
-//                    this->accessMem++;
-//                    return;
-//                }
-//            }
-//        }
-//    }
-//}
-
-//    if (operation == 'r') {
-//        if (L1.isTagExist(pc)) {
-//            this->hitL1++;
-//            return;
-//        } else{
-//            if(L2.isTagExist(pc)){
-//
-//            }
-//        }
-//    }
